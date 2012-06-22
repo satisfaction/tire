@@ -32,7 +32,7 @@ module Tire
         end
 
         def self.delete(url)
-          perform ::RestClient.delete(url)
+          perform ::RestClient.delete(url, nil)
         rescue *ConnectionExceptions
           raise
         rescue ::RestClient::Exception => e
